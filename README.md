@@ -39,17 +39,7 @@ The following is a sample Input and Output JSON for this model which you can use
       "data": [
         "Where can I get good chinese food?"
       ],
-      "name": "sentence_1",
-      "shape": [
-        1
-      ],
-      "datatype": "BYTES"
-    },
-    {
-      "data": [
-        "Where can I get nice Italian food?"
-      ],
-      "name": "sentence_2",
+      "name": "sentences",
       "shape": [
         1
       ],
@@ -67,7 +57,7 @@ The following is a sample Input and Output JSON for this model which you can use
       "name": "result",
       "datatype": "FP32",
       "shape": [
-        2,
+        1,
         768
       ],
       "data": [
