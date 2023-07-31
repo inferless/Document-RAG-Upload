@@ -7,11 +7,8 @@ class InferlessPythonModel:
         self.pipe = SentenceTransformer("sentence-transformers/paraphrase-albert-base-v2")
 
     def infer(self, inputs):
-        sentence_1 = inputs["sentence_1"]
-        sentence_2 = inputs["sentence_2"]
-
-        embeddings = self.pipe.encode([sentence_1, sentence_2])
-
+        sentences = inputs["sentences"]
+        embeddings = self.pipe.encode(sentences)
         return {"result": embeddings}
 
     def finalize(self, args):
