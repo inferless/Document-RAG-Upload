@@ -57,8 +57,8 @@ The following is a sample Input and Output JSON for this model which you can use
       "name": "result",
       "datatype": "FP32",
       "shape": [
-        1,
-        768
+        -1,
+        -1
       ],
       "data": [
         -0.07819648087024689,
@@ -83,23 +83,14 @@ curl --location '<your_inference_url>' \
                     "inputs": [
                       {
                         "data": [
-                          "Where can I get good chinese food?"
+                          "Where can I get good Chinese food?"
                         ],
-                        "name": "sentence_1",
+                        "name": "sentences",
                         "shape": [
                           1
                         ],
                         "datatype": "BYTES"
-                      },
-                      {
-                        "data": [
-                          "Where can I get nice Italian food?"
-                        ],
-                        "name": "sentence_2",
-                        "shape": [
-                          1
-                        ],
-                        "datatype": "BYTES"
+                      }type": "BYTES"
                       }
                     ]
                   }
