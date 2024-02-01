@@ -3,3 +3,4 @@ build:
     - "libssl-dev"
   python_packages:
     - "sentence-transformers"
+    
