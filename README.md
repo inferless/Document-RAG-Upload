@@ -1,5 +1,5 @@
-# Paraphrase-Albert-Base-v2
-Paraphrase-Albert-Base is a model used to define how similar two sentences are to each other. You can use this template to import the model in Inferless.
+# All-MiniLM-L6-v2
+All-MiniLM-L6-v2 is a model used to define how similar two sentences are to each other. You can use this template to import the model in Inferless.
 
 ---
 ## Prerequisites
