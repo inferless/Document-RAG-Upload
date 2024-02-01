@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 
 class InferlessPythonModel:
     def initialize(self):
-        self.pipe = SentenceTransformer("sentence-transformers/paraphrase-albert-base-v2")
+        self.pipe = SentenceTransformer("all-MiniLM-L6-v2")
 
     def infer(self, inputs):
         sentences = inputs["sentences"]
