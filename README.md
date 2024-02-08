@@ -1,5 +1,10 @@
-# All-MiniLM-L6-v2
-All-MiniLM-L6-v2 is a model used to define how similar two sentences are to each other. You can use this template to import the model in Inferless.
+# Semantic Search Application
+In this tutorial, we'll build a semantic search app using Inferless and Pinecone.
+---
+## Architecture
+![Architecture Diagram](https://i.ibb.co/s140VhK/Untitled-design-1.png)
+- **INFERLESS**. We will use it for serverless deployment of the sentence embedding model.
+- **PINECONE**. We will store all the vector embeddings in the pinecone database. Also we will query into the pinecone database for finding the required document.
 
 ---
 ## Prerequisites
@@ -28,48 +33,6 @@ Select the PyTorch as framework and choose **Repo(custom code)** as your model s
 After the create model step, while setting the configuration for the model make sure to select the appropriate runtime.
 
 Enter all the required details to Import your model. Refer [this link](https://docs.inferless.com/integrations/github-custom-code) for more information on model import.
-
-The following is a sample Input and Output JSON for this model which you can use while importing this model on Inferless.
-
-### Input
-```json
-{
-  "inputs": [
-    {
-      "data": [
-        "Where can I get good chinese food?"
-      ],
-      "name": "sentences",
-      "shape": [
-        1
-      ],
-      "datatype": "BYTES"
-    }
-  ]
-}
-```
-
-### Output
-```json
-{
-  "outputs": [
-    {
-      "name": "result",
-      "datatype": "FP32",
-      "shape": [
-        -1,
-        -1
-      ],
-      "data": [
-        -0.07819648087024689,
-        1.3333008289337158,
-        -0.10979261249303818,
-        -0.27275943756103516
-      ]
-    }
-  ]
-}
-```
 
 ---
 ## Curl Command
