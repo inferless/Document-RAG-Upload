@@ -2,7 +2,7 @@
  In this tutorial, we'll build a semantic search app using Inferless and Pinecone.
 ---
 ## Architecture
-![Architecture Diagram](https://i.ibb.co/s140VhK/Untitled-design-1.png)
+![Architecture Diagram](https://i.postimg.cc/mTPGB0H4/Untitled-design-1.png?dl=1)
 - **INFERLESS**. We will use it for serverless deployment of the sentence embedding model.
 - **PINECONE**. We will store all the vector embeddings in the pinecone database. Also we will query into the pinecone database for finding the required document.
 
