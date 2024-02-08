@@ -1,5 +1,5 @@
 # Semantic Search Application
-In this tutorial, we'll build a semantic search app using Inferless and Pinecone.
+ In this tutorial, we'll build a semantic search app using Inferless and Pinecone.
 ---
 ## Architecture
 ![Architecture Diagram](https://i.ibb.co/s140VhK/Untitled-design-1.png)
