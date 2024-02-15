@@ -1,14 +1,8 @@
 INPUT_SCHEMA = {
-    "data": {
-        'datatype': 'STRING',
-        'required': True,
-        'shape': [1,-1],
-        'example': [["This is a book about stock market.","He wrote an article about renewable energy."]]
-    },
-    "type": {
+    "pdf_url": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["query"]
+        'example': ["https://arxiv.org/pdf/2305.18290.pdf"]
     }
 }
