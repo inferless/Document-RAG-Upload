@@ -72,9 +72,13 @@ Open the `app.py` file. This contains the main code for inference. It has three 
 
 ```python
 def infer(self, inputs):
-      question = inputs["question"]
-      result = self.chain.invoke(question)
-      return {"generated_result":result}
+      pdf_link = inputs["pdf_url"]
+      loader = OnlinePDFLoader(pdf_link)
+      data = loader.load()
+      documents = self.text_splitter.split_documents(data)
+      response = self.pinecone.add_documents(documents)
+      
+      return {"result":response}
 ```
 
 **Finalize** - This function is used to perform any cleanup activity for example you can unload the model from the gpu by setting `self.pipe = None`.
