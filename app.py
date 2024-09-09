@@ -3,9 +3,13 @@ from langchain.document_loaders import OnlinePDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain_pinecone import Pinecone
+import nltk
+
 
 class InferlessPythonModel:
     def initialize(self):
+        nltk.download('punkt_tab')
+        nltk.download('averaged_perceptron_tagger_eng')
         #define the index name of Pinecone, embedding model name and pinecone API KEY
         index_name = "documents"
         embed_model_id = "sentence-transformers/all-MiniLM-L6-v2"
