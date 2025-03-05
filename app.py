@@ -1,4 +1,6 @@
 import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from langchain.document_loaders import OnlinePDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -13,6 +15,7 @@ class InferlessPythonModel:
         #define the index name of Pinecone, embedding model name and pinecone API KEY
         index_name = "documents"
         embed_model_id = "sentence-transformers/all-MiniLM-L6-v2"
+        snapshot_download(repo_id=embed_model_id,allow_patterns=["*.safetensors"])
         os.environ["PINECONE_API_KEY"] = "YOUR_PINECONE_API_KEY"
 
         #Initialize the embedding model, text_splitter & pinecone
